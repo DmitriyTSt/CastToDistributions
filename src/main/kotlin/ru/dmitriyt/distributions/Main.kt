@@ -1,6 +1,7 @@
 package ru.dmitriyt.distributions
 
 import ru.dmitriyt.distributions.distribution.ST
+import ru.dmitriyt.distributions.distribution.TR
 
 fun main(args: Array<String>) {
     val arguments = parseArguments(args)
@@ -29,6 +30,15 @@ fun main(args: Array<String>) {
         val distribution = when (arguments[ArgsHelper.DISTRIBUTION.code]) {
             "st" -> {
                 ST(
+                    arguments[ArgsHelper.INPUT.code],
+                    arguments[ArgsHelper.OUTPUT.code],
+                    m,
+                    a,
+                    b
+                )
+            }
+            "tr" -> {
+                TR(
                     arguments[ArgsHelper.INPUT.code],
                     arguments[ArgsHelper.OUTPUT.code],
                     m,

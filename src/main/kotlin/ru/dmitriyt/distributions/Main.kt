@@ -1,6 +1,7 @@
 package ru.dmitriyt.distributions
 
 import ru.dmitriyt.distributions.distribution.EX
+import ru.dmitriyt.distributions.distribution.NR
 import ru.dmitriyt.distributions.distribution.ST
 import ru.dmitriyt.distributions.distribution.TR
 
@@ -49,6 +50,15 @@ fun main(args: Array<String>) {
             }
             "ex" -> {
                 EX(
+                    arguments[ArgsHelper.INPUT.code],
+                    arguments[ArgsHelper.OUTPUT.code],
+                    m,
+                    a,
+                    b
+                )
+            }
+            "nr" -> {
+                NR(
                     arguments[ArgsHelper.INPUT.code],
                     arguments[ArgsHelper.OUTPUT.code],
                     m,

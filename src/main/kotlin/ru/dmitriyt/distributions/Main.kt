@@ -90,6 +90,17 @@ fun main(args: Array<String>) {
                     b
                 )
             }
+            "gm" -> {
+                val c = arguments[ArgsHelper.C.code]?.toDouble() ?: throw Exception("Некорректный атрибут c")
+                GM(
+                    arguments[ArgsHelper.INPUT.code],
+                    arguments[ArgsHelper.OUTPUT.code],
+                    m,
+                    a,
+                    b,
+                    c
+                )
+            }
             else -> {
                 println("Некорректный параметр d")
                 null

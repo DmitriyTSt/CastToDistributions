@@ -81,6 +81,15 @@ fun main(args: Array<String>) {
                     b
                 )
             }
+            "bi" -> {
+                BI(
+                    arguments[ArgsHelper.INPUT.code],
+                    arguments[ArgsHelper.OUTPUT.code],
+                    m,
+                    a,
+                    b
+                )
+            }
             else -> {
                 println("Некорректный параметр d")
                 null

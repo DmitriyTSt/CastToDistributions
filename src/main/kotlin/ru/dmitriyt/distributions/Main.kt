@@ -1,9 +1,6 @@
 package ru.dmitriyt.distributions
 
-import ru.dmitriyt.distributions.distribution.EX
-import ru.dmitriyt.distributions.distribution.NR
-import ru.dmitriyt.distributions.distribution.ST
-import ru.dmitriyt.distributions.distribution.TR
+import ru.dmitriyt.distributions.distribution.*
 
 fun main(args: Array<String>) {
     val arguments = parseArguments(args)
@@ -59,6 +56,15 @@ fun main(args: Array<String>) {
             }
             "nr" -> {
                 NR(
+                    arguments[ArgsHelper.INPUT.code],
+                    arguments[ArgsHelper.OUTPUT.code],
+                    m,
+                    a,
+                    b
+                )
+            }
+            "ln" -> {
+                LN(
                     arguments[ArgsHelper.INPUT.code],
                     arguments[ArgsHelper.OUTPUT.code],
                     m,

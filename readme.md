@@ -12,7 +12,7 @@
 
 Для просмотра всех возможных опций запустить с аргументом `/h`
 
-`java -jar build/libs/generators-all-1.0.jar /h`
+`java -jar build/libs/distributions-all-1.0.jar /h`
 
 #### Параметры командной строки
 

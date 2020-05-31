@@ -72,6 +72,15 @@ fun main(args: Array<String>) {
                     b
                 )
             }
+            "ls" -> {
+                LS(
+                    arguments[ArgsHelper.INPUT.code],
+                    arguments[ArgsHelper.OUTPUT.code],
+                    m,
+                    a,
+                    b
+                )
+            }
             else -> {
                 println("Некорректный параметр d")
                 null

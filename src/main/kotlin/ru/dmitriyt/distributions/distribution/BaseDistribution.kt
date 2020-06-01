@@ -35,13 +35,14 @@ abstract class BaseDistribution(
         } else {
             val lines = StringBuilder()
             var s = readLine()
-            while (s != null) {
+            while (s?.isNotBlank() == true) {
                 lines.append(s)
+                lines.append('\n')
                 s = readLine()
             }
             String(lines)
         }
-        val numbers = inputData?.split(" ")?.map { it.toDouble() }
+        val numbers = inputData?.split(Regex("[\n ]"))?.filter { it.isNotEmpty() }?.map { it.toDouble() }
         val result = numbers?.let { processNumbers(it) }
         if (fileOut != null) {
             result?.forEach {
